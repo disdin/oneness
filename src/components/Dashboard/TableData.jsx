@@ -12,6 +12,8 @@ import GroupIcon from '@mui/icons-material/Group';
 import { Typography } from '@mui/material';
 import AtmIcon from '@mui/icons-material/Atm';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import "../../App.css";
+
 
 function createData(avatar,avC,name, country, Usage,PerColor, atm, activity) {
   return {avatar, avC,name, country, Usage,PerColor, atm, activity };
@@ -26,7 +28,7 @@ const rows = [
 
 export default function TableData() {
   return (
-    <TableContainer style={{width:'80%' }} component={Paper}>
+    <TableContainer style={{width:'87%' }} component={Paper}>
       <Table sx={{ minWidth: 650,}} aria-label="simple table">
         <TableHead style={{backgroundColor:'#e2e2e273'}}>
           <TableRow >
@@ -44,7 +46,7 @@ export default function TableData() {
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-            <TableCell><Avatar  sx={{ bgcolor: row.avC }}>{row.avatar}</Avatar></TableCell>
+            <TableCell><Avatar  sx={{ bgcolor: row.avC,height:34,width:34,fontSize:14 }}>{row.avatar}</Avatar></TableCell>
               <TableCell component="th" scope="row">
                 <Typography>
                 {row.name}

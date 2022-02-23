@@ -22,10 +22,12 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Routes, Route } from "react-router-dom";
 import Badge from "@mui/material/Badge";
+import Avatar from "@mui/material/Avatar";
 
 import MobileHeader from "./MobileHeader";
-import RealeaseProject from "../ReleaseProject/RealeaseProject";
+import RealeaseProject2 from "../ReleaseProject/RealeaseProject2";
 import Dashboard from "../Dashboard/Dashboard";
+// import { orange } from "@mui/material/colors";
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -124,11 +126,51 @@ const Header = () => {
                   color: "#9a9a9a",
                   xs: "none",
                   md: "flex",
-                  fontSize: "30px",
+                  fontSize: "20px",
+                  cursor:'pointer'
+                },
+              }}
+              onClick={() => {
+              navigate("/");
+              }}
+            >
+              Dashboard
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                mr: 2,
+                display: {
+                  color: "#9a9a9a",
+                  xs: "none",
+                  md: "flex",
+                  fontSize: "16px",
+                  marginTop:5,
+                  cursor:'pointer'
                 },
               }}
             >
-              Oneness
+              Users
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                mr: 2,
+                display: {
+                  color: "#9a9a9a",
+                  xs: "none",
+                  md: "flex",
+                  fontSize: "16px",
+                  marginTop:5,
+                  cursor:'pointer'
+                },
+              }}
+            >
+              Settings
             </Typography>
 
             <Box
@@ -154,7 +196,7 @@ const Header = () => {
                     horizontal: "left",
                   }}
                 > */}
-                  <NotificationsNoneIcon color="disabled" sx={{ mr: "15px" }} />
+                <NotificationsNoneIcon color="disabled" sx={{ mr: "15px" }} />
                 {/* </Badge> */}
               </Tooltip>
               <Tooltip title="Messages">
@@ -170,6 +212,17 @@ const Header = () => {
                   <MessageIcon color="disabled" sx={{ mr: "15px" }} />
                 </Badge>
               </Tooltip>
+              <Avatar
+                sx={{
+                  bgcolor: "#ff4e16",
+                  width: 30,
+                  height: 30,
+                  fontSize: "15px",
+                  margin: "-3px 13px 0px 0px",
+                }}
+              >
+                S
+              </Avatar>
               <Tooltip title="Todos">
                 <FormatListBulletedIcon color="disabled" sx={{ mr: "15px" }} />
               </Tooltip>
@@ -207,7 +260,7 @@ const Header = () => {
             sx={{ my: 2, color: "#bdbdbd", display: "block" }}
             onClick={() => {
               navigate("/");
-              handleDrawerClose();
+              // handleDrawerClose();
             }}
           >
             Dashboards
@@ -227,7 +280,11 @@ const Header = () => {
           <DrawerHeader />
           <Routes>
             <Route exact path="/" element={<Dashboard />} />
-            <Route exact path="/releaseProject" element={<RealeaseProject />} />
+            <Route
+              exact
+              path="/releaseProject"
+              element={<RealeaseProject2 />}
+            />
           </Routes>
         </Main>
       </Box>

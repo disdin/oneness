@@ -23,7 +23,7 @@ import {
 export default function ImageMasonry() {
   return (
     <Box sx={{ width: "100%", minHeight: 829 }}>
-      <Masonry columns={{ xs: 2, sm: 3 }} spacing={1.5}>
+      <Masonry columns={{ xs: 2, sm: 3 }} spacing={2.8}>
         {itemData.map((item, index) => (
           <Stack
             style={{ boxShadow: "3px 3px 20px #d2d2d2", borderRadius: "5px" }}
@@ -70,7 +70,7 @@ export default function ImageMasonry() {
                   marginRight: "10px",
                 }}
               >
-                <Avatar sx={{ bgcolor: item.avatarC }}>{item.avatar}</Avatar>{" "}
+                <Avatar sx={{ bgcolor: item.avatarC, width: 34, height: 34  }}>{item.avatar}</Avatar>{" "}
               </Box>
             </Box>
           </Stack>

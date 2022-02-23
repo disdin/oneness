@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+tr {
+  height: 1px;
+  padding: 0px 10px !important;
+}
+
+tr td {
+   height: 1px !important;
+   padding: 6px 16px !important;
+}
+tr th {
+  height: auto !important;
+  padding: 6px 16px !important;
+}

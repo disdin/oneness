@@ -18,7 +18,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { makeStyles } from "@mui/styles";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
-import RealeaseProject from "../ReleaseProject/RealeaseProject";
+import RealeaseProject2 from "../ReleaseProject/RealeaseProject2";
 import Badge from "@mui/material/Badge";
 
 const useStyles = makeStyles((theme) => ({
@@ -115,9 +115,10 @@ const MobileHeader = () => {
               sx={{
                 flexGrow: 1,
                 display: { color: "#9a9a9a" },
+                fontSize:22
               }}
             >
-              Oneness React Assignment
+              Oneness
             </Typography>
 
             <Box>
@@ -181,7 +182,7 @@ const MobileHeader = () => {
       </AppBar>
       <Routes>
         <Route exact path="/" element={<Box sx={{ display: { md: "none" } }}><Dashboard /></Box>} />
-        <Route exact path="/releaseProject" element={<Box sx={{  display: { xs: "flex", md: "none" } }}><RealeaseProject /></Box>} />
+        <Route exact path="/releaseProject" element={<Box sx={{  display: { xs: "flex", md: "none" } }}><RealeaseProject2 /></Box>} />
       </Routes>
     </>
   );
